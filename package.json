@@ -1,0 +1,26 @@
+{
+  "name": "godrejfaqbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/cosmos": "^2.1.2",
+    "base64-to-image": "^1.0.2",
+    "botbuilder": "^3.13.1",
+    "botbuilder-azure": "^3.1.0",
+    "botbuilder-cognitiveservices": "^1.2.0",
+    "dotenv": "^8.0.0",
+    "html-convert": "^2.1.7",
+    "html-to-image": "^0.1.0",
+    "html-to-text": "^5.1.1",
+    "restify": "^7.2.2",
+    "sprintf-js": "^1.1.2",
+    "turndown": "^5.0.3",
+    "turndown-plugin-gfm": "^1.0.2"
+  }
+}
