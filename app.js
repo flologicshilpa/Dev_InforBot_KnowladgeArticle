@@ -35,7 +35,7 @@ server.post('/api/messages', connector.listen());
 //QnaMaker Dialog
 bot.dialog('QnAMaker', [
     function (session, args, next) {
-        var qnaMakerResult
+        var qnaMakerResult;
         const question = session.message.text;
         if(question == 'hi' || question == 'Hi')
         {
@@ -47,7 +47,7 @@ bot.dialog('QnAMaker', [
         }
         else
         {
-           const bodyText = JSON.stringify({ top: 5, question: question })
+           const bodyText = JSON.stringify({ top: 5, question: question });
            const QnaMakerUrl = process.env.QnAEndpointHostName +'/qnamaker/knowledgebases/'+ process.env.QnAKnowledgebaseId +'/generateAnswer';
            try
            {
@@ -102,7 +102,7 @@ bot.dialog('QnAMaker', [
                 }         
                 });
            }
-           catch
+           catch(e)
            {
             console.log("Exception when connecting with QNA Maker");
            }
@@ -139,7 +139,7 @@ bot.dialog('QnAMaker', [
                             }         
                             });
                     }
-                    catch
+                    catch(e)
                     {
                         console.log("Exception when connecting with QNA Maker");
                         session.endDialog();
