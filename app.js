@@ -42,7 +42,7 @@ bot.dialog('QnAMaker', [
              var jsonData = JSON.stringify(session.message);
              var jsonParse = JSON.parse(jsonData);
              session.conversationData.userName=jsonParse.address.user.name;      
-             session.send("Hello %s I'm the Infor Knowladge Article Bot. How can I help you today? \n You can report an issue by entering your query",session.conversationData.userName);
+             session.send("Hello %s I'm the Infor Knowledge Article Bot. How can I help you today? \n You can ask me about any topic contained in Cherwell Knowledge articles.",session.conversationData.userName);
            
         }
         else
