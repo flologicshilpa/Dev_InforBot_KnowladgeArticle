@@ -26,7 +26,6 @@ var connector = new builder.ChatConnector({
 
 var bot = new builder.UniversalBot(connector, [
     function (session) {
-        session.send("Hello,Good Morning");
         session.beginDialog('QnAMaker');
     }
 ]).set('storage', inMemoryStorage); 
