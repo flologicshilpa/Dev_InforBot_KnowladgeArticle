@@ -86,18 +86,18 @@ bot.dialog('QnAMaker', [
                         });   
 
                         session.send("Multiple question returned for related topic.");
-                        builder.Prompts.choice(session, "Select Name",questionOptionsList,{listStyle:2});                     
+                        builder.Prompts.choice(session, "Select/Type a topic number of your interest.",questionOptionsList,{listStyle:2});                     
                        
                     }
                     else
                     {                       
-                            session.send("Answer not found for given query");
+                            session.send("Hmmm, I didn't get that. Maybe rephrase your query and try again");
                             session.endDialog();
                        
                     }
                 }
                 else {
-                    session.send('No data found for given query.');                   
+                    session.send("It looks like I couldn't find an asnwer for your question. Maybe I need to learn more about this topic. You can also try rephrasing the question.");                   
                     session.endDialog();
                 }         
                 });
